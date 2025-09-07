@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOGMC - Minecraft Server</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="https://raw.githubusercontent.com/MOGMC1/mogmcweb/main/server.png" alt="MOGMC" class="nav-logo">
+                <span class="nav-title">MOGMC</span>
+            </div>
+            <div class="nav-status">
+                <div id="status-indicator" class="status-badge offline">
+                    <span class="status-dot"></span>
+                    <span id="status-text">Offline</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">MOGMC</h1>
+                <p class="hero-subtitle">Minecraft 1.7 - 1.21.x</p>
+                <div class="server-info">
+                    <div class="server-ip">
+                        <span class="ip-label">Server IP:</span>
+                        <span id="server-address" class="ip-address">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gamemodes">
+            <div class="container">
+                <h2 class="section-title">Game Modes</h2>
+                <div id="gamemodes-list" class="gamemodes-grid">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

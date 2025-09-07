@@ -1,0 +1,23 @@
+{
+  "serverStatus": "Maintenance",
+  "serverIp": "Currently none. Stay up for updates in our discord: https://discord.gg/P9mPeVFNrU",
+  "serverPort": "25565",
+  "gamemodes": [
+    {
+      "name": "Lobby",
+      "description": "Main hub area connecting to all gamemodes."
+    },
+    {
+      "name": "Lobby PvP",
+      "description": "Sword pvp in the lobby!"
+    },
+    {
+      "name": "Lobby Parkour",
+      "description": "Challenge yourself with parkour courses in the lobby!"
+    },
+    {
+      "name": "Speedbridge",
+      "description": "Speedbridge practice!"
+    }
+  ]
+}

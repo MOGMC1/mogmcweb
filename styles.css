@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: #111111;
+    border-bottom: 1px solid #222222;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-brand:hover {
+    transform: translateX(5px) rotate(1deg);
+}
+
+.nav-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.nav-logo:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.nav-title:hover {
+    transform: skew(-5deg);
+}
+
+.status-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.status-badge:hover {
+    transform: translateY(-2px);
+}
+
+.status-badge.online {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    animation: pulse-green 2s infinite;
+}
+
+.status-badge.offline {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: wiggle 1.5s ease-in-out infinite;
+}
+
+.main {
+    min-height: calc(100vh - 80px);
+}
+
+.hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid #222222;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #ffffff, #cccccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleWiggle 8s ease-in-out infinite;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #888888;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.server-info {
+    display: inline-block;
+    background: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+    animation: bounceIn 1s ease-out;
+}
+
+.server-info:hover {
+    transform: scale(1.05) rotate(1deg);
+    border-color: #555555;
+}
+
+.ip-label {
+    color: #888888;
+    margin-right: 0.5rem;
+}
+
+.ip-address {
+    font-family: 'Geist Mono', 'Fira Code', 'Cascadia Code', monospace;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+.gamemodes {
+    padding: 4rem 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    animation: wobble 6s ease-in-out infinite;
+}
+
+.gamemodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gamemode-card {
+    background: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.gamemode-card:hover {
+    border-color: #555555;
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gamemode-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.gamemode-card:hover .gamemode-name {
+    transform: skew(-3deg);
+}
+
+.gamemode-description {
+    color: #cccccc;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.gamemode-card:hover .gamemode-description {
+    transform: translateX(5px);
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+@keyframes pulse-green {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.3); }
+    50% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes titleWiggle {
+    0%, 100% { transform: skew(0deg) scale(1); }
+    33% { transform: skew(1deg, 1deg) scale(1.01); }
+    66% { transform: skew(-1deg, -1deg) scale(1.01); }
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 8px rgba(255, 255, 255, 0.3); }
+    to { text-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4); }
+}
+
+@keyframes wobble {
+    0%, 100% { transform: translateX(0) rotate(0); }
+    15% { transform: translateX(-5px) rotate(-1deg); }
+    30% { transform: translateX(4px) rotate(1deg); }
+    45% { transform: translateX(-3px) rotate(-0.5deg); }
+    60% { transform: translateX(2px) rotate(0.5deg); }
+    75% { transform: translateX(-1px) rotate(0); }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-title {
+        font-size: 1.25rem;
+    }
+    
+    .hero {
+        padding: 3rem 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .gamemodes {
+        padding: 3rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .gamemodes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .server-info {
+        padding: 0.75rem 1.5rem;
+    }
+}
